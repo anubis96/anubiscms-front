@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import api from "../../services/api";
-import NoteItems from "./NoteItems";
+import ArticleItems from "./ArticleItems";
 import { FiFilePlus } from "react-icons/fi";
 import { Blocks } from "react-loader-spinner";
 import Errors from "../Errors";
 
-const AllNotes = () => {
+const AllArticles = () => {
   const [notes, setNotes] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -87,7 +87,7 @@ const AllNotes = () => {
               <>
                 <div className="pt-10 grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-y-10 gap-x-5 justify-center">
                   {notes.map((item) => (
-                    <NoteItems key={item.id} {...item} id={item.id} />
+                    <ArticleItems key={item.id} {...item} id={item.id} />
                   ))}
                 </div>
               </>
@@ -99,4 +99,4 @@ const AllNotes = () => {
   );
 };
 
-export default AllNotes;
+export default AllArticles;

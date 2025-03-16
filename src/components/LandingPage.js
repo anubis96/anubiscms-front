@@ -24,7 +24,7 @@ const LandingPage = () => {
     <div className="min-h-[calc(100vh-74px)] flex justify-center">
       <div className="lg:w-[80%] w-full py-16  space-y-4  ">
         <motion.h1
-          className="font-montserrat uppercase text-headerColor  xl:text-headerText md:text-4xl text-2xl mx-auto text-center font-bold sm:w-[95%] w-full"
+          className="font-comforta uppercase text-textColor  xl:text-headerText md:text-4xl text-2xl mx-auto text-center font-bold sm:w-[95%] w-full"
           initial="hidden"
           animate="visible"
           variants={fadeInFromTop}
@@ -61,13 +61,13 @@ const LandingPage = () => {
           ) : (
             <>
               <Link to="/login">
-                <Buttons className="sm:w-52 w-44 bg-customRed font-semibold hover:scale-105 transition-all duration-200 cursor-pointer text-white px-10 py-3 rounded-sm">
-                  SignIn
+                <Buttons className="sm:w-52 w-44 bg-white font-semibold hover:scale-105 transition-all duration-200 cursor-pointer text-textColor border-2 border-textColor px-10 py-3 rounded-sm">
+                  Connexion
                 </Buttons>
               </Link>
               <Link to="/signup">
                 <Buttons className="sm:w-52 w-44 bg-btnColor font-semibold hover:scale-105 transition-all duration-200 cursor-pointer text-white px-10 py-3 rounded-sm">
-                  SignUp
+                  Creer un compte
                 </Buttons>
               </Link>
             </>

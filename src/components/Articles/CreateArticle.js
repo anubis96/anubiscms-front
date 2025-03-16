@@ -7,7 +7,7 @@ import api from "../../services/api";
 import Buttons from "../../utils/Buttons";
 import toast from "react-hot-toast";
 
-const CreateNote = () => {
+const CreateArticle = () => {
   const navigate = useNavigate();
   //set the content of the reactquill
   const [editorContent, setEditorContent] = useState("");
@@ -81,4 +81,4 @@ const CreateNote = () => {
   );
 };
 
-export default CreateNote;
+export default CreateArticle;

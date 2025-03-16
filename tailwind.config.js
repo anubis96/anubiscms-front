@@ -5,8 +5,8 @@ module.exports = {
     extend: {
       colors: {
         headerColor: "#242530",
-        textColor: "#ffffff",
-        btnColor: "#0172F4",
+        textColor: "#480a44",
+        btnColor: "#480a44",
         noteColor: "#FFCF7C",
       },
       fontWeight: {
@@ -24,6 +24,7 @@ module.exports = {
       fontFamily: {
         montserrat: ["Montserrat"],
         dancingScript: ["Dancing Script"],
+        comforta: ["Comfortaa"]
       },
       fontSize: {
         logoText: "30px",

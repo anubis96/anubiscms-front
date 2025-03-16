@@ -14,7 +14,7 @@ import Modals from "../PopModal";
 //importing the the columns from the auditlogs
 import { auditLogscolumn } from "../../utils/tableColumn";
 
-const NoteDetails = () => {
+const ArticleDetails = () => {
   const { id } = useParams();
   //open modal for deleteing a note
   const [modalOpen, setModalOpen] = useState(false);
@@ -294,4 +294,4 @@ const NoteDetails = () => {
   );
 };
 
-export default NoteDetails;
+export default ArticleDetails;

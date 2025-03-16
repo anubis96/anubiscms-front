@@ -2,9 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from "./components/Auth/Login";
 import Signup from "./components/Auth/Signup";
-import AllNotes from "./components/Notes/AllNotes";
-import NoteDetails from "./components/Notes/NoteDetails";
-import CreateNote from "./components/Notes/CreateNote";
+import AllArticles from "./components/Articles/AllArticles";
+import ArticleDetails from "./components/Articles/ArticleDetails";
+import CreateArticle from "./components/Articles/CreateArticle";
 import Navbar from "./components/Navbar";
 import ProtectedRoute from "./components/ProtectedRoute";
 import LandingPage from "./components/LandingPage";
@@ -38,7 +38,7 @@ const App = () => {
           path="/notes/:id"
           element={
             <ProtectedRoute>
-              <NoteDetails />
+              <ArticleDetails />
             </ProtectedRoute>
           }
         />
@@ -46,7 +46,7 @@ const App = () => {
           path="/notes"
           element={
             <ProtectedRoute>
-              <AllNotes />
+              <AllArticles />
             </ProtectedRoute>
           }
         />
@@ -54,7 +54,7 @@ const App = () => {
           path="/create-note"
           element={
             <ProtectedRoute>
-              <CreateNote />
+              <CreateArticle />
             </ProtectedRoute>
           }
         />

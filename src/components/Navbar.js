@@ -26,11 +26,13 @@ const Navbar = () => {
   };
 
   return (
-    <header className="h-headerHeight z-50 text-textColor bg-headerColor shadow-sm  flex items-center sticky top-0">
+    <header className="h-headerHeight z-50 text-violet-950 bg-white shadow-sm  flex items-center sticky top-0">
       <nav className="sm:px-10 px-4 flex w-full h-full items-center justify-between">
-        <Link to="/">
+        <Link to="/" className="flex items-center gap-5">
           {" "}
-          <h3 className=" font-dancingScript text-logoText">Secure Notes</h3>
+          <img className="w-12 rounded-full" src="/anubis_logo.jpeg" alt=""/>
+          <h3 className="font-comforta text-logoText font-semibold">OR</h3>
+          {/* <h3 className="font-dancingScript text-logoText">ANUBIS LAB</h3> */}
         </Link>
         <ul
           className={`lg:static  absolute left-0  top-16 w-full lg:w-fit lg:px-0 sm:px-10 px-4  lg:bg-transparent bg-headerColor   ${
@@ -45,14 +47,14 @@ const Navbar = () => {
                 <li
                   className={` ${
                     pathName === "/notes" ? "font-semibold " : ""
-                  } py-2 cursor-pointer  hover:text-slate-300 `}
+                  } py-2 cursor-pointer  hover:font-bold `}
                 >
                   My Notes
                 </li>
               </Link>
               <Link to="/create-note">
                 <li
-                  className={` py-2 cursor-pointer  hover:text-slate-300 ${
+                  className={` py-2 cursor-pointer  hover:font-bold ${
                     pathName === "/create-note" ? "font-semibold " : ""
                   } `}
                 >
@@ -66,7 +68,7 @@ const Navbar = () => {
             <li
               className={`${
                 pathName === "/contact" ? "font-semibold " : ""
-              } py-2 cursor-pointer hover:text-slate-300`}
+              } py-2 cursor-pointer hover:font-bold`}
             >
               Contact
             </li>
@@ -74,11 +76,11 @@ const Navbar = () => {
 
           <Link to="/about">
             <li
-              className={`py-2 cursor-pointer hover:text-slate-300 ${
+              className={`py-2 cursor-pointer hover:font-bold ${
                 pathName === "/about" ? "font-semibold " : ""
               }`}
             >
-              About
+              A propos
             </li>
           </Link>
 
@@ -86,7 +88,7 @@ const Navbar = () => {
             <>
               <Link to="/profile">
                 <li
-                  className={` py-2 cursor-pointer  hover:text-slate-300 ${
+                  className={` py-2 cursor-pointer  hover:font-bold ${
                     pathName === "/profile" ? "font-semibold " : ""
                   }`}
                 >
@@ -96,7 +98,7 @@ const Navbar = () => {
               {isAdmin && (
                 <Link to="/admin/users">
                   <li
-                    className={` py-2 cursor-pointer uppercase   hover:text-slate-300 ${
+                    className={` py-2 cursor-pointer uppercase   hover:font-bold ${
                       pathName.startsWith("/admin") ? "font-semibold " : ""
                     }`}
                   >
@@ -113,8 +115,8 @@ const Navbar = () => {
             </>
           ) : (
             <Link to="/signup">
-              <li className="w-24 text-center bg-btnColor font-semibold px-4 py-2 rounded-sm cursor-pointer hover:text-slate-300">
-                SignUp
+              <li className="w-auto text-center bg-btnColor text-white font-semibold px-4 py-2 rounded-sm cursor-pointer hover:text-slate-300">
+                Connexion
               </li>
             </Link>
           )}

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import "react-quill/dist/quill.snow.css";
 import moment from "moment";
 
-const NoteItems = ({ parsedContent, id, createdAt }) => {
+const ArticleItems = ({ parsedContent, id, createdAt }) => {
   const formattedDate = moment(createdAt).format("D MMMM YYYY");
   return (
     <div className="sm:px-5 px-2 py-5 shadow-md bg-noteColor shadow-white rounded-lg min-h-96 max-h-96 relative overflow-hidden ">
@@ -29,4 +29,4 @@ const NoteItems = ({ parsedContent, id, createdAt }) => {
   );
 };
 
-export default NoteItems;
+export default ArticleItems;
